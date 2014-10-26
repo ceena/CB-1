@@ -25,6 +25,31 @@ public abstract class IFObjectValidator {
 
 	private IFRuleSet loadRuleSet(String ruleSetName) {
 		IFRuleSet ruleSet = null;
+		Class<?> cls = null;
+		
+		try {
+			cls = Class.forName(ruleSetName);
+		
+			try {
+				ruleSet = (IFRuleSet) cls.newInstance();
+			} catch (InstantiationException | IllegalAccessException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+		return null;
+	}
+
+	private IFRuleSet loadRuleSet1(String ruleSetName) {
+		IFRuleSet ruleSet = null;
 
 		ClassLoader c1 = 
 			new JavaSourceClassLoader(this.getClass().getClassLoader());
