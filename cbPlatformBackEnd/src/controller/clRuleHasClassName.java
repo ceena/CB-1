@@ -1,5 +1,8 @@
 package controller;
 
+import org.codehaus.commons.compiler.CompileException;
+import org.codehaus.commons.compiler.jdk.ScriptEvaluator;
+
 public class clRuleHasClassName extends IFRule {
 
 	public clRuleHasClassName(){
@@ -10,8 +13,20 @@ public class clRuleHasClassName extends IFRule {
 	}
 	@Override
 	public clResultObject checkRule(clFeed feed) {
-		// TODO Auto-generated method stub
+		ScriptEvaluator se = new ScriptEvaluator();
+
+		try {
+			se.cook(feed.getValue());
+		} catch (CompileException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		Class<? extends ScriptEvaluator> clSe =  se.getClass();
 		return null;
+		
+		
 	}
 
+	
 }
