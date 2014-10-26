@@ -1,7 +1,5 @@
 package controller;
 
-import controller.controllerConfig;
-
 public final class clController {
 	
 public static clController instance = null;
@@ -17,19 +15,15 @@ public static clController instance = null;
 		return instance;
 	}
 
-	public boolean evaluateFeed(int objectType, clFeed feed) {
+	public clResultObject evaluateFeed(int excNo, clFeed feed) {
+		clResultObject resultObject = null;
 		
-		switch (objectType) {
-		case 1:
-			
-			
-			break;
-
-		default:
-			break;
-		}
+		//Get corresponding ruleSet from DB
 		
-		return false;
+		
+		
+//		resultObject = 
+		return resultObject;
 		
 		
 	}

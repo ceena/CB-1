@@ -3,19 +3,20 @@ package view;
 import controller.clController;
 import controller.clFeed;
 import controller.clFeeder;
-import controller.controllerConfig;
+import controller.clResultObject;
 
 public class clUIMain {
 
 	static clController controller = null;
 	static clFeed feedFromUI = null;
-	static int objectType = 0;
+	static int excNo = 0;
 	
 	public static void main(String[] args) {
 		initialize();
 
 		if(clFeeder.getInstance().getFeed().getValue() != feedFromUI.getValue()){
-			clController.getInstance().evaluateFeed(controllerConfig.OBJECT_TYPE_CODE, feedFromUI);
+			clFeeder.getInstance().getFeed().setValue(feedFromUI.getValue());
+			clResultObject evaluationResult = controller.evaluateFeed(excNo, feedFromUI);
 		}
 	}
 
@@ -30,7 +31,7 @@ public class clUIMain {
 		
 		controller = clController.getInstance();
 		feedFromUI.setValue(str);
-		
+		excNo = 1001;
 		
 	}
 }
