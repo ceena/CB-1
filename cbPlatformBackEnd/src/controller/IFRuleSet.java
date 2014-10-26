@@ -15,10 +15,9 @@ public abstract class IFRuleSet {
 	}
 	
 	public void  addRules(IFRule clRule, int sucR, int mandtR, int scoreR){
-		
+		clRuleAtt ruleAtt = new clRuleAtt(clRule, sucR, mandtR, scoreR);
+		alRules.add(ruleAtt);
 	}
-		
-	
 	
 	public clResultObjectSet evaluate(clFeed feed){
 		

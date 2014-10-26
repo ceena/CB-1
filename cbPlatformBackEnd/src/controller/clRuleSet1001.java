@@ -4,7 +4,9 @@ public class clRuleSet1001 extends IFRuleSet {
 
 	public clRuleSet1001() {
 		super(2001, "Prelim Class Checks");
-		// TODO Auto-generated constructor stub
+		super.addRules(new clRuleHasClassName(), 1002, 1, 100);
+		super.addRules(new clRuleHasMainMethod() , 1003, 1, 100);
+		super.addRules(new clRuleHasOutputInMethod(), 0, 0, 100);
 	}
-
+	
 }
