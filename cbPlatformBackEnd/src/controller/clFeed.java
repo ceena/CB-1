@@ -2,7 +2,7 @@ package controller;
 
 public class clFeed {
 	String feed = null;
-	clFeed(String str){
+	public clFeed(String str){
 		feed = new String(str);
 	}
 	

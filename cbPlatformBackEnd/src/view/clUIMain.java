@@ -4,19 +4,22 @@ import controller.clController;
 import controller.clFeed;
 import controller.clFeeder;
 import controller.clResultObject;
+import controller.clResultObjectSet;
 
 public class clUIMain {
 
 	static clController controller = null;
-	static clFeed feedFromUI = null;
+	static clFeed feedFromUI;
 	static int excNo = 0;
 	
 	public static void main(String[] args) {
+		
 		initialize();
+//		clFeed feed =clFeeder.getInstance().getFeed();
 
 		if(clFeeder.getInstance().getFeed().getValue() != feedFromUI.getValue()){
 			clFeeder.getInstance().getFeed().setValue(feedFromUI.getValue());
-			clResultObject evaluationResult = controller.evaluateFeed(excNo, feedFromUI);
+			clResultObjectSet evaluationResult = controller.evaluateFeed(excNo, feedFromUI);
 		}
 	}
 
@@ -30,7 +33,7 @@ public class clUIMain {
 		
 		
 		controller = clController.getInstance();
-		feedFromUI.setValue(str);
+		feedFromUI = new clFeed(str);
 		excNo = 1001;
 		
 	}

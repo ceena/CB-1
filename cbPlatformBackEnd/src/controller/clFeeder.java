@@ -2,7 +2,7 @@ package controller;
 
 public class clFeeder {
 	
-	clFeed feed = null;
+	clFeed feed = new clFeed("");
 	public static clFeeder instance = null;
 	
 	protected clFeeder() {

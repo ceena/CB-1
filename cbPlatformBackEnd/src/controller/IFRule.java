@@ -1,10 +1,10 @@
 package controller;
 
 public abstract class IFRule {
-	String ID   = null;
+	int ID      = 0;
 	String desc = null;
 	
-	public void setAttributes(String id, String desc){
+	public void setAttributes(int id, String desc){
 		this.ID = id;
 		this.desc = desc;
 	}
