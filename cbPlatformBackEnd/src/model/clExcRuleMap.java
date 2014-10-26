@@ -9,10 +9,10 @@ public class clExcRuleMap {
 		String ruleSetName = null;
 		switch(excNo){
 		case 1001:
-			 ruleSetName = "clRuleSet1001";
+			 ruleSetName = "controller.clRuleSet1001";
 			 break;
 		case 1002:
-			 ruleSetName = "clRuleSet1002";
+			 ruleSetName = "controller.clRuleSet1002";
 			 break;
 		}
 		
