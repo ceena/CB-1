@@ -12,4 +12,10 @@ public class clResultObjectSet {
 	public ArrayList<clResultObject> getResultObjectSet(){
 		return al;
 	}
+	
+	public void displayResultObjects(){
+		for (clResultObject clResultObject : al) {
+			clResultObject.displayResult();
+		}
+	}
 }

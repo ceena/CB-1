@@ -20,7 +20,9 @@ public class clUIMain {
 		if(clFeeder.getInstance().getFeed().getValue() != feedFromUI.getValue()){
 			clFeeder.getInstance().getFeed().setValue(feedFromUI.getValue());
 			clResultObjectSet evaluationResult = controller.evaluateFeed(excNo, feedFromUI);
+			evaluationResult.displayResultObjects();
 		}
+		
 	}
 
 	
@@ -31,10 +33,15 @@ public class clUIMain {
 				  + "System.out.println(\"Hello World!\")"
 				  + "}}" );
 		
+		String HALLO_WORLD_SOURCE = "public class Guitar"
+				+ "{\n"
+				+ "      int price; public static String run() {\n"
+				+ "        return \"run sucessfully...\";\n" + "    }\n" + "}";
+		
 		
 		controller = clController.getInstance();
-		feedFromUI = new clFeed(str);
-		excNo = 1001;
+		feedFromUI = new clFeed(HALLO_WORLD_SOURCE);
+		excNo = 1000;
 		
 	}
 }

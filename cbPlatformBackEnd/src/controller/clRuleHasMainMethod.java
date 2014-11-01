@@ -11,7 +11,7 @@ public class clRuleHasMainMethod extends IFRule{
 	@Override
 	public clResultObject checkRule(clFeed feed) {
 		// TODO Auto-generated method stub
-		return null;
+		return new clResultObject(0, 0, " implement clRuleHasMainMethod checkRule");
 	}
 
 }
