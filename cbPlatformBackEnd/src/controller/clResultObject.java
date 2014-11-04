@@ -2,12 +2,12 @@ package controller;
 
 public class clResultObject {
 	private int resultScore 	= 0;
-	private int mandtFlg    	= 0; //0 = false; 1 = true
+	private int sucessFlag    	= 0; //0 = false; 1 = true
 	private String resultLog	= null;
 	
 	public clResultObject( int score, int flg, String log){
 		resultScore = score;
-		mandtFlg    = flg;
+		sucessFlag    = flg;
 		resultLog   = log;
 	}
 	
@@ -16,10 +16,15 @@ public class clResultObject {
 	}
 	
 	public int getFlg(){
-		return mandtFlg;
+		return sucessFlag;
 	}
 	
 	public String getLog(){
 		return resultLog;
 	}
+	
+	public void displayResult(){
+			System.out.println("score:"+this.resultScore+", flg:"+this.sucessFlag+", log:"+this.resultLog);		
+	}
+	
 }
