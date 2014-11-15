@@ -2,6 +2,7 @@ package controller;
 
 import model.clModel;
 
+//clas controller
 public final class clController {
 	
 public static clController instance = null;
