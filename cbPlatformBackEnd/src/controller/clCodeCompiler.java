@@ -7,6 +7,7 @@ import java.lang.reflect.Field;
 import org.codehaus.commons.compiler.CompileException;
 import org.codehaus.janino.SimpleCompiler;
 
+//classs to compile code
 public class clCodeCompiler {
 
 	protected ClassLoader classLoader = null;

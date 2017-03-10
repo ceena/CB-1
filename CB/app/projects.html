@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head ng-app="pApp">
+  <!-- Standard Meta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- Site Properities -->
+  <title>CODE BRIDGER</title>
+
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Open+Sans:300italic,400,300,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" type="text/css" href="packaged/css/semantic.css">
+  <link rel="stylesheet" type="text/css" href="homepage.css">
+
+  <script src="jquery.js"></script>
+  <script src="packaged/javascript/semantic.js"></script>
+  <script src="homepage.js"></script>
+
+      <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css({.tmp,app}) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+
+</head>
+<body id="home">
+
+    <div class="container" ng-view=""></div>
+
+
+  <div class="ui inverted masthead segment" style="padding-top:10px">
+    <div class="column">
+      <div class="inverted secondary pointing ui menu">
+        <div class="header item"><img src="images/cblogo.gif" class="ui small image" width="20px" height="20px"/>CODE BRIDGER</div>
+        <div class="right menu">
+          <div class="ui top right pointing mobile dropdown link item">
+            Activities
+            <i class="dropdown icon"></i>
+            <div class="menu">
+              <a class="item">Home</a>
+              <a class="item">Assess</a>
+              <a class="item">Implement</a>
+              <a class="item">Projects</a>
+            </div>
+          </div>
+
+          <a class="item">Home</a>
+          <a class="item">Profile</a>
+          <a class="item">Community</a>
+        </div>
+      </div>
+      
+
+    </div>
+  </div>
+
+
+      <script src="bower_components/jquery/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+
+</body>
+
+</html>
